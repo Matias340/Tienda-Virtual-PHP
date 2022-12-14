@@ -30,6 +30,20 @@ spl_autoload_register(function($class){
    }
 });
 
+//Load
+$controllerFile = "Controllers/".$controller.".php";
+if(file_exists($controllerFile)){
+   require_once($controllerFile);
+   if(method_exists($controller, $method)){
+       $controller->{$method}($params);
+   }else{
+     echo "No existe metodo";
+   }
+}else{
+    echo "No existe controlador";
+}
+
+
 echo "<br>";
 echo "controlador: ".$controller.' - metodo:'.$method;
 echo "<br>";
