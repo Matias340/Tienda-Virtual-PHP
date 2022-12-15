@@ -44,10 +44,10 @@ if(file_exists($controllerFile)){
 }
 
 
-echo "<br>";
-echo "controlador: ".$controller.' - metodo:'.$method;
+/*echo "<br>";
+echo "controlador: ".$controller;
 echo "<br>";
 echo "metodo:".$method;
 echo "<br>";
-echo "parametros".$params;
+echo "parametros".$params;*/
 ?>
