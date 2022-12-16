@@ -7,7 +7,7 @@ class Home extends Controllers{
   }
 
     public function home($parems){
-        echo "Mensaje desde el controlador";
+        $this->views->getView($this, "home");
     }
 
     public function datos($params){

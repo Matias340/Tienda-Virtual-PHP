@@ -24,7 +24,6 @@ if(!empty($arrUrl[2])){
 
 spl_autoload_register(function($class){
    //echo LIBS. 'Core/'.$class." .php";
-   Libraries/Core/home.php;
    if(file_exists(LIBS.'Core/'.$class.".php")){
        require_once(LIBS.'Core/'.$class.".php");
    }
@@ -37,10 +36,10 @@ if(file_exists($controllerFile)){
    if(method_exists($controller, $method)){
        $controller->{$method}($params);
    }else{
-     echo "No existe metodo";
+     require_once("Controllers/Error.php");
    }
 }else{
-    echo "No existe controlador";
+    require_once("Controllers/Error.php");
 }
 
 
