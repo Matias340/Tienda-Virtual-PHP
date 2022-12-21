@@ -10,15 +10,6 @@ class Home extends Controllers{
         $this->views->getView($this, "home");
     }
 
-    public function datos($params){
-        echo "Datos recibido: ".$params;
-    }
-
-    public function carrito($params){
-      $carrito = $this->model->getCarrito($params);
-      echo $carrito; 
-    }
-
   }
 
 
